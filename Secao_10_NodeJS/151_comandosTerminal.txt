@@ -1,0 +1,3 @@
+Instalar nodemon com a flag -g para que seja instalação global:
+> npm i -g nodemon
+> nodemon .\151_usandoModulosTerceiros.js

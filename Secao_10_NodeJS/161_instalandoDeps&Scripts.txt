@@ -1,0 +1,3 @@
+Olhar pasta "154_funcionarios" e "comandosTerminal.txt"
+
+- exclusão de "node_modules" e recriação a partir do arquivo "package.json" com o comando <npm i>

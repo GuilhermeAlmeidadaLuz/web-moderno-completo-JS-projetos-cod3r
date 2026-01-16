@@ -1,0 +1,4 @@
+> cd Secao_22_React
+> npx create-react-app exercicios
+> cd ./exercicios
+> npm start

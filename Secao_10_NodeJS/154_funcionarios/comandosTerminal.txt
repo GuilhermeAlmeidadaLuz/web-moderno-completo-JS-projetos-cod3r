@@ -1,0 +1,15 @@
+cmd:
+> npm init -y
+> npm i --save
+> npm install --save-dev axios@0.17.1 -E
+    (--save-dev: em desenvolvimento, não vai para produção)
+    (-E: exata)
+
+
+Aula 161 (Instalando Deps & Scripts):
+> npm i
+    (instala o que está definido no arquivo package.json)
+> npm start
+    (inicia o script de nome "start")
+> npm run dev
+    (run é usado para executar scripts que não são padrão do Node. Ver documentacao npm.)

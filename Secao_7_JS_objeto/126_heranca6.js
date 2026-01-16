@@ -8,7 +8,7 @@ const aula2 = new Aula('Até Breve', 456)
 console.log(aula1, aula2)
 
 // simulando o new
-function novo(f, ...params) {   // '...' é operador spreadind/resting
+function novo(f, ...params) {   // '...' é operador spread/rest
     const obj = {}
     obj.__proto__ = f.prototype
     f.apply(obj, params)

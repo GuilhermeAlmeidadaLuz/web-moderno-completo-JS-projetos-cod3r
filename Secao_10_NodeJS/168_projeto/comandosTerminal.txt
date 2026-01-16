@@ -1,0 +1,29 @@
+# Aula 168 - Projeto: API com Express #01
+
+> cd Secao_10_NodeJS
+> mkdir 168_projeto
+> cd 168_projeto
+> npm init -y
+
+> npm i --save express@4.16.2 -E
+
+> mkdir src
+> code ./src/servidor.js
+
+em package.json:
+- colocar => "main": "src/servidor.js"
+- colocar nodemon => "scripts":{"start":"nodemon", ...}
+
+para instalar nodemon como dependência de desenvolvimento (não em produção):
+> npm i --save-dev nodemon@1.14.11 -E
+> npm start
+
+# Aula 169 - Projeto: API com Express #02
+
+Criar banco de dados em memória usando objeto
+> code ./src/bancoDeDados.js
+
+# Aula 171 - Projeto: API com Express #03
+
+- tratar no servidor o body da requisição (olhar 170_erroBodyParser.md)
+npm i --save body-parser@1.18.2 -E
