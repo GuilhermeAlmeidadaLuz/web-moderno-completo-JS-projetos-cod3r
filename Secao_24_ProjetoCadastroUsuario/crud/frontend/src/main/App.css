@@ -1,0 +1,98 @@
+/* Aula 421. Aplicando Estilo (CSS Grid) */
+:root {
+    /* variáveis CSS criadas: */
+    --bg-dark: #1A2F3A; /* cor de background */
+
+    /* Usado no grid da tela: */
+    --logo-height: 100px;   /* altura usada no grid pela Logo */
+    --header-height: 100px; /* altura usada no grid pelo Componente Header */
+    
+    --menu-top-height: 70px; /* Aula 433. Adicionando Responsividade - específica para o menu ir para cima em dispositivos menores*/
+    
+    --aside-width: 225px;   /* largura usada no grid pelos Componentes Logo e Nav */
+    --footer-height: 40px;  /* altura usada no grid pelo Componente Footer */
+
+    --shadow: /* sombra*/
+        0 2px 23px 0 rgba(0, 0, 0, 0.1),
+        0 2px 49px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Configuração que envolve seleção da página inteira: */
+* { /* seletor universal */
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;  /* código embutido do google fonts para Montserrat em /public/index.html */
+}
+
+/* Layout em Grid: */
+.app {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: var(--aside-width) 1fr;  /* 1ª coluna é o menu da largura de <aside/> e 1fr(ame) é o restante da largura */
+    grid-template-rows:
+        var(--header-height)
+        1fr
+        var(--footer-height);
+    grid-template-areas:    /* 2 colunas x 3 linhas = 6 áreas a serem preenchidas*/
+        "logo header"   /* informar em Logo.jsx > tag aside > class logo e Main.jsx > Header > tag header > class header */
+        "menu content"  /* informar em Nav.jsx > tag aside > class menu-area e Main.jsx > tag main > class content*/
+        "menu footer"; /* informar em Nav.jsx > tag aside > class menu-area e Footer.jsx > tag footer > class footer */
+    height: 100vh;  /* viewport heigth - tela [0 - 100], logo 100vh ocupa a altura da tela inteira */
+    background-color: #F5F5F5;
+}
+
+aside.logo {    /* tag.className*/
+    /* App.jsx > Logo.jsx > tag aside > class logo*/
+    grid-area: logo;
+}
+
+header.header {     /* tag.className*/
+    /* App.jsx > Main.jsx > Header.jsx > tag header > class header*/
+    grid-area: header;
+}
+
+aside.menu-area {    /* tag.className*/
+    /* App.jsx > Nav.jsx > tag aside > class menu-area*/
+    grid-area: menu;
+}
+
+main.content {      /* tag.className*/
+    /* App.jsx > Main.jsx > tag main > class content*/
+    grid-area: content;
+}
+
+footer.footer {     /* tag.className*/
+    /* App.jsx > Footer.jsx > tag footer > class footer*/
+    grid-area: footer;
+}
+
+@media(max-width: 768px) {  /* Aula 433. Adicionando Responsividade */
+    .app {
+        grid-template-rows:
+            var(--header-height)
+            var(--menu-top-height)
+            1fr
+            var(--footer-height);
+        grid-template-columns: var(--aside-width) 1fr;
+        grid-template-areas: 
+            "logo header"
+            "menu menu"
+            "content content"
+            "footer footer";
+    }
+}
+
+@media(max-width: 576px) {  /* Aula 433. Adicionando Responsividade */
+    .app {
+        grid-template-rows:
+            var(--logo-height)
+            var(--menu-top-height)
+            1fr
+            var(--footer-height);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "logo"
+            "menu"
+            "content"
+            "footer";
+    }
+}

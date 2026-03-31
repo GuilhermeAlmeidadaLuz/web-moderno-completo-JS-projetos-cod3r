@@ -1,0 +1,20 @@
+/* Aula 422. Componente Logo */
+aside.logo {
+    /* Caixa que envolve o logo */
+    background-color: var(--bg-dark);   /* --bg-dark é de App.css, como Logo foi instanciado lá, possui acesso */
+    display: flex;
+    justify-content: center;    /* palavra chave é "uso e posicionamento na largura": como justificar um texto no word, a "página" nesse caso é aside.logo e o "texto" ou conteúdo nesse caso é assumido pela (tag a > tag img) */
+    align-items: center; /* palavra chave é "uso e posicionamento na altura": como o posicionamento do texto dentro da altura de uma célula na planilha do excel, cima - meio - baixo */   
+}
+
+aside.logo img {
+    /* tratamento da própria imagem */
+    padding: 0px 15px; /*MDN docs -> 0px acima e abaixo | 15px esquerda e direita */
+    width: 100%;    /* imagem limitada pela largura, ocupa 100% da área disponível, sem extrapolar a caixa aside.logo */
+}
+
+@media(max-width: 576px) {  /* Aula 433. Adicionando Responsividade */
+    aside.logo img {
+        width: 350px;
+    }
+}

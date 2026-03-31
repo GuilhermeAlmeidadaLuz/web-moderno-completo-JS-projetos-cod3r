@@ -1,0 +1,9 @@
+/* Aula 424. Componente Rodapé */
+footer.footer { /* tag.className */
+    display: flex;
+    align-items: center;    /* texto ancorado superior, centro, inferior*/
+    justify-content: end;   /* texto a esquerda, centro, direita, justificado */
+    padding: 0px 25px;
+    background-color: #FFF;
+    box-shadow: var(--shadow);
+}
