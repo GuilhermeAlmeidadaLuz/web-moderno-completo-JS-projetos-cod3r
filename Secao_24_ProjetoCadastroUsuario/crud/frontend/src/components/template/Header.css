@@ -1,0 +1,12 @@
+/* Aula 423. Componente Cabeçalho */
+header.header { /* tag.className */
+    background-color: #FFF;
+    padding: 0px 15px;  /*vertical horizontal (cima direita baixo esquerda)*/
+    overflow: hidden;   /* caso o texto passe da área do cabeçalho, não é visível a parte que passou*/  
+    white-space: nowrap;
+    box-shadow: var(--shadow);
+}
+
+header.header h1 { /* tag.className tag */
+    font-size: 1.8em;   /* 1.8 * 16px = 28.8px do padrão do browser, já que o App.css e o Main.css não possuem essa propriedade */
+}
