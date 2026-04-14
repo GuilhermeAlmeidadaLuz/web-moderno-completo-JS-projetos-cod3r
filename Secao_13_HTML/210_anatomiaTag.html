@@ -1,0 +1,35 @@
+<!-- Tags que não existem, apenas para exemplificar a anatomia -->
+<!-- HTML é case insensitive: não diferencia maiúsculo de minúsculo -->
+<TAG>
+    <!-- Corpo da Tag -->
+     <bla>
+        <opa>Texto</opa>
+        <opa>Texto</opa>
+        <opa>Texto</opa>
+        <opa>Texto</opa>
+     </bla>
+</tag>
+
+<tag>   <!-- Tag sem corpo e sem barra de fechamento -->
+<!-- HTML --> <meta> <br> <input>
+
+<tag /> <!-- Tag sem corpo e com barra de fechamento -->
+<!-- HTML tags-->   <meta /> <br /> <input />
+
+<tag param1="valor1" param2='valor2'>
+    <!-- Corpo da Tag -->
+</tag>
+
+<tag param1="valor1" param2='valor2' />
+
+<!-- parâmetros/propriedades próprios da tag que recebem argumentos/atributos passados -->
+<input type="button" value="Processar!">
+
+<!-- HTML5: possibilidade de criar os parâmetros/propriedades que recebem os argumentos/atributos passados (com chave parâmetro = valor atributo) -->
+<input type="text" cod3r-cpf>
+
+<!-- Recurso bastante utilizado no Vue.js - diretivas: propriedades personalizadas -->
+<input type="text" v-if v-for v-else>
+
+<!-- possibilidade de criar as próprias tags com um framework/library (componentização para reuso) -->
+<Calendario></Calendario>   <!-- Componente que renderiza HTML, CSS e JS atuando em conjunto -->

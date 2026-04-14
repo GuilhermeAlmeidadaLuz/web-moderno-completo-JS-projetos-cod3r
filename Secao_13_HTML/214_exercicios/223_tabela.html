@@ -1,0 +1,56 @@
+<table>
+    <caption>Produtos</caption> <!-- Do que se trata a tabela (Título) -->
+    <thead> <!-- Define a área que o cabeçalho vai ocupar (Cabeçalho da Tabela)-->
+        <tr>    <!-- Linha do Cabeçalho da Tabela -->
+            <th>Produto</th>    <!-- Cabeçalho da linha na posição da Coluna 1 -->
+            <th>Preço</th>    <!-- Cabeçalho da linha na posição da Coluna 2 -->
+            <th>Quantidade</th>    <!-- Cabeçalho da linha na posição da Coluna 3 -->
+            <th>Total</th>    <!-- Cabeçalho da linha na posição da Coluna 4 -->
+        </tr>
+    </thead>
+    <tbody> <!-- Define a área que o dados vão ocupar (Corpo da Tabela) -->
+        <tr>    <!-- Linha do Corpo da Tabela -->
+            <td>iPad</td>   <!-- Dado da linha na posição da Coluna 1 (Produto) -->
+            <td>3289,00</td>    <!-- Dado da linha na posição da Coluna 1 (Preço) -->
+            <td>5</td>  <!-- Dado da linha na posição da Coluna 1 (Quantidade) -->
+            <td>16445,00</td>   <!-- Dado da linha na posição da Coluna 1 (Total) -->
+        </tr>
+        <tr>
+            <td>Samsung S9</td>
+            <td>2649,00</td>
+            <td>8</td>
+            <td>21192,00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total em Compras:</td>
+            <td>37637,00</td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    thead tr {
+        border-bottom: solid 3px #444;
+    }
+
+    tbody tr:hover {
+        background-color: #dedede;
+    }
+
+    tfoot tr {
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+
+</style>

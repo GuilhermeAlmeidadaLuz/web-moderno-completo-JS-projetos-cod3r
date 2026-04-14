@@ -1,0 +1,80 @@
+<video id="meuVideo" width="800" height="450" controls autoplay controlsList="nodownload">
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+    Seu browser não suporta a tag de vídeo.
+</video>
+
+<div wm-progresso="meuVideo" class="progresso">
+    <div></div>
+</div>
+
+<div>
+    <button wm-play="meuVideo">Play</button>
+    <button wm-pause="meuVideo">Pause</button>
+</div>
+
+<style>
+    .progresso {
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+        margin: 20px;
+    }
+
+    .progresso > div {
+        background-color: red;
+        color: #fff;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 0%;
+    }
+</style>
+
+<script>
+    function atualizaProgresso(video, barraDeProgresso) {
+        // console.log("Current Time:", video.currentTime)
+        // pegar tempo final do vídeo e tempo atual, para calcular a porcentagem
+        let percentual = (video.currentTime * 100) / video.duration
+        barraDeProgresso.style.width = percentual + '%' // alterar a propriedade width da div de progress à medida que o vídeo executa
+        // console.log(percentual)
+    }
+
+    function controleDeVideo(video, botaoPlay, botaoPause, barraDeProgresso) {
+        // criar função para play
+        // criar função para pause
+        botaoPlay.addEventListener('click', async () => {
+            // console.log('clicou')
+            if (video.paused) {
+                // console.log(video.paused)
+                await video.play()
+            }
+        })
+        botaoPause.addEventListener('click', async () => {
+            console.log('clicou')
+            if (video.played) {
+                console.log(video.playing)
+                await video.pause()
+            }
+        })
+        video.ontimeupdate = (event) => {
+            atualizaProgresso(video, barraDeProgresso)
+        }
+            
+    }    
+    
+    const video = document.querySelector('#meuVideo')
+    const barraDeProgresso = document.querySelector('[wm-progresso] > div')
+    const botaoPlay = document.querySelector('[wm-play]')
+    const botaoPause = document.querySelector('[wm-pause]')
+    
+    controleDeVideo(video, botaoPlay, botaoPause, barraDeProgresso)
+
+    // console.log(v.currentTime)
+    // v.onplaying = (event) => {
+    //     console.log("O vídeo está rodando...")
+    //     setTimeout(() => {
+    //         console.log(v.currentTime)
+
+    //     }, 1000 * 5)
+    // }
+</script>
