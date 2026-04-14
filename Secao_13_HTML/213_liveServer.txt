@@ -1,0 +1,22 @@
+Live Server
+Fala, Pessoal! Beleza?
+
+Temos recebido muitas mensagens de alunos enfrentando problemas ao utilizar o “http-server”. Seja na hora de inicializar, atualizar páginas ou até mesmo aos escolher portas, o “http-server” tem se mostrado problemático e confuso.
+
+Sugerimos então o uso do “Live Server”, que assim como o http-server, simula um servidor local para páginas dinâmicas e estáticas. O Live Server possui várias vantagens e a principal delas é que é bem mais estável e muito mais simples de usar.
+
+Para baixá-lo, na barra lateral esquerda do seu VS Code clique no seguinte botão:
+
+
+Em seguida, digite “Live Server” na barra de pesquisa e clique em install, como na imagem abaixo:
+
+ 
+
+Feita a instalação, clique com o botão direito no arquivo e selecione “Open with live server”.
+
+
+Uma aba deverá abrir em seu navegador com o arquivo executando em um servidor local.
+
+Então é isso pessoal! Quaisquer dúvidas estamos à disposição.
+
+Um abraço e bons estudos!

@@ -1,0 +1,23 @@
+<h1>Links</h1>
+
+<!-- URL Absoluta: dever vir acompanhada do protocolo http(s) -->
+<a href="https://www.google.com.br">Google 1</a><br>
+<!-- <a href="www.google.com.br">Google 0</a><br>     --> <!-- Procura pelo link dentro do próprio site, na pasta raiz -->
+<a href="http://www.google.com.br" target="_blank">Google 2</a><br><br>
+
+<!-- URL Relativa -->
+<!-- Obs.1: Situado na pasta raiz, usando Ajax todos irão funcionar -->
+<!-- Obs.2: Situado na pasta exercícios, o 1º não irá funcionar -->
+<a id="inicio" href="index.html">Voltar 1</a><br>   <!-- Procura arquivo no diretório atual da url -->
+<a href="/index.html">Voltar 2</a><br>  <!-- Procura arquivo usando como referência a pasta raiz "/" do servidor -->
+<a href="../index.html">Voltar 3</a><br><br>    <!-- Procura o arquivo em um diretório anterior -->
+
+<a href="mailto:email@empresa.com.br">Entre em contato</a><br><br>
+
+<div id="noticia" style="position: absolute; top: 2000px;">
+    <h1>Notícia Buemba!</h1>
+    <p>Não era nada...</p>
+    <a href="#inicio">Voltar para Início</a>
+</div>
+
+<a href="#noticia">Ir para Notícia</a>

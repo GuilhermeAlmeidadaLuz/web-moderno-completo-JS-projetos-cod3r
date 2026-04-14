@@ -1,0 +1,72 @@
+<!-- 
+    - instalar globalmente:
+        npm i -g http-server
+
+    - abra um terminal na pasta que index.html se encontra e inicialize o servidor de provimento de páginas estáticas do node
+
+    - desabilitar cache do http-server do node na inicialização do servidor 
+        http-server -c-1 .
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios HTML</title>
+    <style>
+        #conteudo {
+            padding: 30px 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            Exercícios HTML
+        </h1>
+        <!-- Com uso de http-server do node instalado globalmente via npm -->
+    </header>
+    <nav>
+        <a href wm-nav="214_exercicios/214_teste.html">00 - Teste</a> |
+        <!-- <a href wm-nav="214_exercicios/214_temp.html">TEMPPPP</a> -->
+        <a href wm-nav="214_exercicios/216_texto1.html">01 - Texto 1</a> |
+        <a href wm-nav="214_exercicios/217_texto2.html">02 - Texto 2</a> |
+        <a href wm-nav="214_exercicios/218_listas.html">03 - Listas</a> |
+        <a href wm-nav="214_exercicios/219_listaAninhada.html">04.1 - Lista Aninhada</a> |
+        <a href wm-nav="214_exercicios/220_desafioListaAninhada.html">04.2 - Desafio Lista Aninhada com JS</a> |
+        <a href wm-nav="214_exercicios/221_links.html">05 - Links</a> |
+        <a href wm-nav="214_exercicios/223_tabela.html">06 - Tabela</a> |
+        <a href wm-nav="214_exercicios/225_form/form.html/">07 - Formulário</a> |
+        <a href wm-nav="214_exercicios/228_imagens.html/">08 - Imagens</a> |
+        <a href wm-nav="214_exercicios/228.1_desafioSliderImagens.html/">08.1 - Desafio Slider com Imagens</a> |
+        <a href wm-nav="214_exercicios/229_desafioSlider1/">08.2 - Desafio Slider #01</a> |
+        <a href wm-nav="214_exercicios/230_desafioSlider2/">08.3 - Desafio Slider #02</a> |
+        <a href wm-nav="214_exercicios/231_video.html">09 - Vídeo</a> |
+        <a href wm-nav="214_exercicios/231.1_desafioVideo.html">09.1 - Desafio de Controlar Vídeo (minha solução)</a> |
+        <a href wm-nav="214_exercicios/232_desafioControlarVideo.html">09.2 - Desafio de Controlar Vídeo (solução do professor)</a> |
+        <a href wm-nav="214_exercicios/233_tagsNaoVisuais.html">10 - Tags Não Visuais</a> |
+    </nav>
+    <hr/>
+    <section id="conteudo"></section>
+    <hr>
+    <footer>
+        Curso de Web Moderno
+    </footer>
+    <script>
+
+        document.querySelectorAll('[wm-nav]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+            
+            link.onclick = function(e) {
+                e.preventDefault()  // previne o comportamento padrão de navegação
+                // console.log('ação!!!')
+
+                // requisição Ajax com Fetch (simples, baseado em promises):
+                fetch(link.getAttribute('wm-nav'))
+                    .then(resp => resp.text())  // função resp.text() retorna uma promise para o próximo .then()
+                    .then(html => conteudo.innerHTML = html) // acesso ao texto html
+            }
+        })
+    </script> 
+</body>
+</html>
