@@ -10,10 +10,67 @@
             font-size: 60px;
             padding: 30px;
             border: solid 5px #222;
+            color: #fff;
         }
 
         .static {
-            
+            /* considera os elementos anteriores e a ordem */
+            top: 100px;
+            left: 100px;
+            background-color: steelblue;
+        }
+
+        .fixed {
+            /* pode ser fixado na página e diferente do absolute, permanece na rolagem */
+            position: fixed;
+            bottom: 30px;
+            right: 0px;
+            background-color: tomato;
+        }
+
+        .relative1 {
+            /* leva em conta o elemento anterior (pai ou irmão) para se posicionar*/
+            position: relative;
+            left: 50px;
+            top: 5px;
+            background-color: seagreen;
+        }
+
+        .absolute1 {
+            /* leva em conta a viewport/pai (janela da página) */
+            position: absolute;
+            left: 350px;
+            top: 120px;
+            background-color: violet;
+        }
+
+        .relative2 {
+            /* leva em conta o irmão anterior */
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: slategray;
+        }
+
+        .absolute2 {
+            /* dentro de um 'relative' leva em conta seu pai relativo, dentro de static, leva em conta a viewport como pai (página) */
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+        }
+
+        .sticky {
+            /* em determinado momento acompanha a rolagem, um pouco diferente do fixed que permanece desde início na posição */
+            /* exemplo: efeito avalanche, onde o elemento é arrastado à medida que a rolagem acontece */
+            position: -webkit-sticky;   /* safari precisa para funcionar */
+            position: sticky;
+            background-color: #777;
+            top: 10px;
         }
     </style>
 </head>
