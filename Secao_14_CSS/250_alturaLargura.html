@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Altura e Largura</title>
+    <style>
+        /* Se tamanho for pertecentual (relativo), o pai é levado em consideração.
+            Já os tamanhos absolutos, fazem com que o pai cresça com o crescimento do filho
+        */
+        html {
+             /* Por padrão body e html:
+                - Ocupa a largura toda do viewport (100%)
+                - Não ocupa a altura toda viewport (100%)
+            */
+            height: 100%;
+        }
+        body {
+            /* Por padrão body e html:
+                - Ocupa a largura toda do viewport (100%)
+                - Não ocupa a altura toda viewport (100%)
+            */
+            font-size: 40px;
+            background-color: coral;
+            height: 100%;
+            margin: 0;
+        }
+
+        div {
+            background-color: seagreen;
+        }
+
+        span {
+            background-color: dodgerblue;
+        }
+
+        span, div {
+            width: 50%;
+            /* display: block; */
+            /* display: inline; */
+            height: 250px; /* div considera - o pai aumenta de tamanho (body)*/
+            height: 50%;    /* div não considera - o pai não aumenta de tamanho (body)*/
+            display: block; /* para que span considere altura e largura*/
+            /* display: inline-block; */ /* para que span considere altura e largura*/
+        }
+    </style>
+</head>
+
+<body>
+    <div>Título</div><!-- Existe um espaço em branco que faz parte e causa interferência no comportamento do display: inline-block -->
+    <span>Subtítulo</span>
+</body>
+
+</html>
